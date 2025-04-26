@@ -1,3 +1,11 @@
 requests
 pyyaml
 eth_utils
+numpy
+pandas
+matplotlib
+scikit-learn
+plotly
+dash
+openai
+jinja2

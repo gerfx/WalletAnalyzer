@@ -1,0 +1,46 @@
+Determine whether the given Ethereum wallet is sybil or legitimate based on the provided features. Sybil wallets are fake or duplicate identities, often used for manipulation in DeFi or other blockchain systems. They typically exhibit the following characteristics:
+
+Low diversification: Small number of unique contracts, tokens, funding sources, or recipients.
+
+High activity with low diversification: Large number of transactions, but interaction with only a limited number of entities.
+
+Recent creation: Low wallet age (wallet_age_days).
+
+Burst activity: High maximum number of transactions per day (max_txs_per_day) compared to average activity.
+
+Consistent small transactions: Low average value of outgoing ETH transactions (avg_outgoing_eth_value) with low standard deviation (std_outgoing_eth_value), indicating scripted behavior.
+
+Single incoming transfer: Wallets that received funds from only one source.
+
+Suspicious transaction patterns: Transactions occurring at short intervals or repeating regularly.
+
+Evaluate the wallet based on these criteria and any other patterns you can identify from the provided features.
+
+Wallet features:
+Total number of transactions: {{ total_transactions }}
+
+Unique contracts: {{ unique_contracts }}
+
+Unique tokens: {{ unique_tokens }}
+
+Wallet age (days): {{ wallet_age_days }}
+
+Transaction frequency (transactions per day): {{ transaction_frequency }}
+
+Average time between transactions (days): {{ avg_time_between_txs }}
+
+Maximum transactions per day: {{ max_txs_per_day }}
+
+Unique funding sources: {{ unique_funders }}
+
+Outgoing ETH transactions: {{ outgoing_eth_txs }}
+
+Average value of outgoing ETH transactions: {{ avg_outgoing_eth_value }}
+
+Standard deviation of outgoing ETH transaction values: {{ std_outgoing_eth_value }}
+
+Unique recipients: {{ unique_recipients }}
+
+Return strictly CSV with the following fields:
+   - `wallet_address`: {{ wallet_address }}
+   - `is_sybil`: 1 or 0

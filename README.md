@@ -38,7 +38,7 @@ WalletAnalyzer/
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/yourusername/WalletAnalyzer.git
+   git clone https://github.com/gerfx/WalletAnalyzer.git
    cd WalletAnalyzer
    ```
 
